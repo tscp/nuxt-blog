@@ -5,10 +5,10 @@
       <nuxt-link to="/" class="button--grey">トップへ戻る</nuxt-link>
       <div class="article-list">
         <ul>
-          <li>
+          <li v-for="post in posts" :key="post.id">
             <div class="article-image"></div>
             <div class="title">
-              <nuxt-link :to="{ name: 'articles-slug', params: { slug: 'test' }}">タイトル</nuxt-link>
+              <nuxt-link :to="{ name: 'articles-slug', params: { slug: post.fields.slug }}">{{ post.fields.title }}</nuxt-link>
             </div>
           </li>
         </ul>
@@ -18,8 +18,34 @@
 </template>
 
 <script>
-export default {
-}
+  // contentfulの宣言
+  import {createClient} from '~/plugins/contentful.js'
+  // 設定情報の取得
+  const client = createClient()
+
+  export default {
+    // 変数の宣言
+    data () {
+      return {
+        posts: []
+      }
+    },
+    // データの取得(非同期)
+    asyncData ({ env }) {
+      // contentfulより記事データを取得
+      return client.getEntries({
+        // 対象のブログID
+        'content_type': env.CTF_BLOG_ID,
+        // 最大取得件数
+        'limit': 10,
+      }).then(entries => {
+        // 取得出来たのでindex.vueに返却
+        return {
+          posts: entries.items
+        }
+      }).catch(console.error)
+    }
+  }
 </script>
 
 <style>

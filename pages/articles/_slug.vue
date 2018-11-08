@@ -1,18 +1,45 @@
 <template>
   <section class="container">
-    <div>
-      <nuxt-link to="/articles/" class="button--grey">ブログ一覧へ戻る</nuxt-link>
-      <h1 class="title">タイトル</h1>
-      <div class="text">
-        本文
-      </div>
+    <div class="title">{{ currentPost.fields.title }}</div>
+    <div class="text">
+      <div class="title">{{ currentPost.fields.mainText }}</div>
     </div>
   </section>
 </template>
 
 <script>
+// contentfulの宣言
+import { createClient } from '~/plugins/contentful.js';
+// 設定情報の取得
+const client = createClient();
+
 export default {
-}
+  // 変数の宣言
+  data() {
+    return {
+      allPosts: [],
+      currentPost: [],
+    };
+  },
+  // データの取得(非同期)
+  asyncData({ env, params }) {
+    return client
+      .getEntries({
+        content_type: env.CTF_BLOG_POST_TYPE_ID,
+      })
+      .then((entries) => {
+        const posts = entries.items;
+        const current = posts.filter(function(item) {
+          return item.fields.slug === params.slug;
+        });
+        return {
+          allPosts: posts,
+          currentPost: current[0],
+        };
+      })
+      .catch(console.error);
+  },
+};
 </script>
 
 <style>
