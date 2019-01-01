@@ -21,7 +21,10 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:400,100,300' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Ropa+Sans' }
     ]
   },
 
@@ -56,7 +59,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   },
   env: {
@@ -76,7 +79,7 @@ module.exports = {
         // }),
       ])
         .then(([posts, categories]) => [
-          ...posts.items.map(post => `articles/${post.fields.id}`),
+          ...posts.items.map(post => `works/${post.fields.id}`),
           // ...categories.items.map(category => `articles/category/${category.fields.slug}`),
         ]);
     },
