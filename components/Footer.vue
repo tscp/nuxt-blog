@@ -19,7 +19,7 @@
           </address>
         </section>
         <section class="foot-info-item sitemap">
-          <h4 class="foot-info-title">SITE MAP</h4>
+          <h4>SITE MAP</h4>
           <div class="foot-info-summary">
             <nav>
               <ul class="foot-nav">
@@ -45,8 +45,10 @@
   @media(min-width: 769px) {
     footer {
       background-color: #000;
+      font-family: "Roboto", sans-serif;
       width: 100%;
       position: relative;
+      padding: 30px 40px 70px;
 
       .foot-info-list {
         display: table;
@@ -71,7 +73,34 @@
         letter-spacing: .1em;
       }
 
+      address {
+        color: #fff;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-family: "Roboto", sans-serif;
+        font-weight: normal;
+        line-height: 2;
+        letter-spacing: .1em;
+
+        .ja {
+          font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, メイリオ, Roboto, "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;
+          font-weight: normal;
+          letter-spacing: 0;
+        }
+        .en {
+          color: #919191;
+        }
+        .tel {
+          display: inline-block;
+          padding-right: 30px;
+        }
+      }
+
       nav {
+        font-size: 1.2rem;
+        font-style: normal;
+        font-family: "Roboto", sans-serif;
+        font-weight: normal;
         height: 100%;
         margin: 0 auto;
       }
@@ -80,21 +109,51 @@
         overflow: hidden;
         display: flex;
         flex: 1;
+        flex-wrap: wrap;
         align-items: center;
         margin: 0;
         padding: 0;
         height: 100%;
         justify-content: space-between;
+        width: 350px;
 
         li {
+          display: inline-block;
           list-style: none;
+          line-height: 2;
+          width: 105px;
+
+          &:before {
+            content: "・";
+            color: #fff;
+            margin-right: 4px;
+          }
 
           a {
             color: #fff;
+            letter-spacing: 1px;
             text-decoration: none;
+            transition: color 0.4s;
+            &:hover {
+              color: #45adcc;
+            }
           }
         }
       }
+
+      .foot-bottom {
+        display: table;
+        width: 100%;
+        padding: 30px 1% 0;
+      }
+      .copyright {
+        font-size: 1rem;
+        color: #8e8e8e;
+        display: table-cell;
+        text-align: right;
+        vertical-align: bottom;
+      }
+
     }
   }
 </style>
