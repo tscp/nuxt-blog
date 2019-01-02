@@ -14,7 +14,9 @@
 
 <style lang="scss">
   .header-logo {
+    display: block;
     width: 50px;
+    height: 53px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

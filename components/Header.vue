@@ -21,7 +21,9 @@
       background-color: rgba(0, 0, 0, 0.12);
       width: 100%;
       height: 90px;
-      position: relative;
+      position: fixed;
+      top: 0;
+      left: 0;
 
       &:hover {
         background-color: #000;
@@ -55,6 +57,7 @@
           a {
             color: #fff;
             font-family: "Ropa Sans", sans-serif;
+            letter-spacing: 1px;
             text-decoration: none;
           }
         }
