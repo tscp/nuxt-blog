@@ -14,7 +14,7 @@
   </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
   @media(min-width: 769px) {
     header {
@@ -24,6 +24,7 @@
       position: fixed;
       top: 0;
       left: 0;
+      z-index: 999;
 
       &:hover {
         background-color: #000;

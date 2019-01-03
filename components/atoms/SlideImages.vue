@@ -1,24 +1,16 @@
 <template>
-  <div :class="direction">
-    <figure>
-      <ul>
-        <li><img :src="img1" /></li>
-        <li><img :src="img2" /></li>
-        <li><img :src="img3" /></li>
-      </ul>
-      <figcaption>
-        <h3>{{ h3 }}</h3>
-        <p>{{ p }}</p>
-      </figcaption>
-    </figure>
+  <div :class="pageClass">
+    <ul>
+      <li v-for="img of slideImages"><img :src="'/assets/images/' + img" /></li>
+    </ul>
   </div>
 </template>
 
 <script>
   export default {
-    props: ['direction', 'img1', 'img2', 'img3', 'h3', 'p'],
+    props: ['pageClass', 'slideImages'],
     mounted: function() {
-      let imgs = document.querySelectorAll('img');
+      let imgs = this.$el.querySelectorAll('img');
       imgs.forEach(function (el) {
         el.style.opacity = 0;
       });
@@ -60,43 +52,25 @@
 </script>
 
 <style lang="scss" scoped>
-  div {
-    width: 86%;
-    margin: 0 auto;
-  }
-  h3 {
-    margin-bottom: 30px;
-    text-align: left;
-    font-size: 1.6rem;
-    font-weight: bold;
-    line-height: 1.5;
-  }
-  p {
-    font-size: 1.2rem;
-    line-height: 1.9;
-  }
   ul {
     margin: 0;
     padding: 0;
     position: relative;
     li {
       list-style: none;
-      width: 605px;
       position: absolute;
       img {
         width: 100%;
       }
     }
   }
-  figure {
-    display: flex;
-    justify-content: space-between;
-    min-height: 415px;
-    figcaption {
-      width: 40%;
+  .service {
+    width: 55%;
+    height: 378px;
+    ul {
+      li {
+        width: 605px;
+      }
     }
-  }
-  .right figure {
-    flex-direction: column-reverse;
   }
 </style>

@@ -13,7 +13,6 @@
 
 <style lang="scss" scoped>
   div {
-    width: 86%;
     margin: 0 auto;
     padding-top: 98px;
   }
@@ -51,5 +50,8 @@
     font-weight: 100;
     letter-spacing: .03em;
     font-size: 1.4rem;
+  }
+  .even h2 span {
+    background-color: #fbfbfb
   }
 </style>
