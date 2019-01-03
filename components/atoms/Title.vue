@@ -10,7 +10,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   h1 {
     width: 100%;
     height: auto;
