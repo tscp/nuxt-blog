@@ -1,6 +1,7 @@
 <template>
   <div>
     <Title name="SERVICE" />
+    <TabContent />
     <ServiceContent
       name="BRAND/EC SITE"
       sub="設計＆制作"
@@ -40,10 +41,11 @@
 
 <script>
   import Title from '~/components/atoms/Title'
-  import ServiceContent from "~/components/molecules/ServiceContent";
+  import TabContent from "~/components/molecules/TabContent"
+  import ServiceContent from "~/components/molecules/ServiceContent"
   export default {
     components : {
-      Title, ServiceContent
+      Title, TabContent, ServiceContent
     }
   }
 </script>
