@@ -35,7 +35,6 @@
       z-index: -1;
     }
     span {
-      background-color: #fff;
       display: inline-block;
       letter-spacing: .2rem;
       padding: 0 1em;
@@ -51,7 +50,10 @@
     letter-spacing: .03em;
     font-size: 1.4rem;
   }
-  .even h2 span {
+  .odd h2 span {
     background-color: #fbfbfb
+  }
+  .even h2 span {
+    background-color: #fff
   }
 </style>
