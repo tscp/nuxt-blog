@@ -18,6 +18,7 @@
     text-align: center;
     font-family: "Ropa Sans", sans-serif;
     letter-spacing: 0.2em;
+    line-height: 1;
     font-size: 2.4rem;
     margin-top: 90px;
   }
