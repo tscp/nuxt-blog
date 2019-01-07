@@ -81,7 +81,9 @@
         font-weight: normal;
         line-height: 2;
         letter-spacing: .1em;
-
+        a {
+          color: #fff;
+        }
         .ja {
           font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, メイリオ, Roboto, "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;
           font-weight: normal;

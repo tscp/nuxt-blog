@@ -32,6 +32,8 @@
       'だからこそ、私たちのビジョンは自らが常に経験（体験）の探求者であることです。'
       ]"
     />
+    <CompanyInformation />
+    <Client />
   </div>
 </template>
 
@@ -39,8 +41,11 @@
   import Title from '~/components/atoms/Title'
   import AboutOverview from '~/components/atoms/AboutOverview'
   import AboutContent from '~/components/molecules/AboutContent'
+  import CompanyInformation from '~/components/molecules/CompanyInformation';
+  import Client from '~/components/molecules/Client';
   export default {
     components : {
+      CompanyInformation, Client,
       Title, AboutOverview, AboutContent
     }
   }
