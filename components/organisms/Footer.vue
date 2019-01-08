@@ -15,7 +15,7 @@
           <address>
             <span class="tel">TEL : 03-6455-1030</span>
             <span class="fax">FAX : 03-6455-1031</span><br> →
-            <a href="https://pnrm.co.jp/contact/">Mail form here</a>
+            <a href="/contact">Mail form here</a>
           </address>
         </section>
         <section class="foot-info-item sitemap">
@@ -23,12 +23,12 @@
           <div class="foot-info-summary">
             <nav>
               <ul class="foot-nav">
-                <li><a href="https://pnrm.co.jp/works/">WORKS</a></li>
-                <li><a href="https://pnrm.co.jp/about/">ABOUT</a></li>
-                <li><a href="https://pnrm.co.jp/service/">SERVICE</a></li>
-                <li><a href="https://pnrm.co.jp/recruit/">RECRUIT</a></li>
-                <li><a href="https://pnrm.co.jp/news/">NEWS</a></li>
-                <li><a href="https://pnrm.co.jp/contact/">CONTACT</a></li>
+                <li><a href="/works">WORKS</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/service">SERVICE</a></li>
+                <li><a href="/recruit">RECRUIT</a></li>
+                <li><a href="/news">NEWS</a></li>
+                <li><a href="/contact">CONTACT</a></li>
               </ul>
             </nav>
           </div>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="tab">
     <ul class="tab-content">
       <li class="active"><TabButton en="RESEARCH" ja="分析" icon="research" /></li>
       <li><TabButton en="PLANNING" ja="設計" icon="planning" /></li>
@@ -59,6 +59,10 @@
       color: #7f7f7f;
       fill: #7f7f7f;
       transition: all 0.4s;
+
+      .tab-button {
+        padding: 60px 0 45px;
+      }
 
       &::after {
         content: '';

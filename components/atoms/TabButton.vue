@@ -1,19 +1,21 @@
 <template>
-  <div class="service-tab-button" v-on:click="handler">
-    <i class="service-tab-icon" v-if="icon === 'research'">
-      <IconResearch />
-    </i>
-    <i class="service-tab-icon" v-else-if="icon === 'planning'">
-      <IconPlanning />
-    </i>
-    <i class="service-tab-icon" v-else-if="icon === 'solution'">
-      <IconSolution />
-    </i>
-    <i class="service-tab-icon" v-else-if="icon === 'operation'">
-      <IconOperation />
-    </i>
-    <p class="service-title-en">{{ en }}</p>
-    <p class="service-title-ja">{{ ja }}</p>
+  <div class="tab-button" v-on:click="handler">
+    <div v-if="icon">
+      <i class="tab-icon" v-if="icon === 'research'">
+        <IconResearch/>
+      </i>
+      <i class="tab-icon" v-else-if="icon === 'planning'">
+        <IconPlanning/>
+      </i>
+      <i class="tab-icon" v-else-if="icon === 'solution'">
+        <IconSolution/>
+      </i>
+      <i class="tab-icon" v-else-if="icon === 'operation'">
+        <IconOperation/>
+      </i>
+    </div>
+    <p class="title-en">{{ en }}</p>
+    <p class="title-ja">{{ ja }}</p>
   </div>
 </template>
 
@@ -24,7 +26,7 @@
   import IconOperation from '~/components/atoms/IconOperation'
 
   export default {
-    props : ['en', 'ja', 'icon'],
+    props : ['en', 'ja', 'icon', 'cls'],
     data () {
       return {
         value: 'icon'
@@ -61,10 +63,10 @@
 </script>
 
 <style lang="scss" scoped>
-  .service-tab-button {
+  .tab-button {
     cursor: pointer;
     text-align: center;
-    padding: 60px 0 45px;
+    padding: 0;
     box-sizing: border-box;
     line-height: 1;
     i {
@@ -73,7 +75,7 @@
       margin-bottom: 20px;
     }
   }
-  .service-title {
+  .title {
     &-en {
       margin-bottom: 10px;
       font-family: "Roboto Condensed", sans-serif;
