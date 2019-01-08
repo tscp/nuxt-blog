@@ -37,7 +37,7 @@
   // contentfulの宣言
   import {createClient} from '~/plugins/contentful.js'
   // 設定情報の取得
-  const client = createClient()
+  const client = createClient();
 
   export default {
     components : {
@@ -67,7 +67,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .works {
     background-color: #f6f5f6;
     padding-top: 2em;

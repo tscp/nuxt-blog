@@ -20,7 +20,7 @@
         <h3>{{ currentPost.fields.title }}</h3>
         <hr />
         <div>
-          <p>{{ currentPost.fields.mainText }}</p>
+          <p >{{ currentPost.fields.mainText }}</p>
         </div>
       </div>
       <div class="summary-block">
@@ -36,15 +36,12 @@
         </dl>
       </div>
     </article>
-    <OtherWorks />
-    <div class="more-btn">
-      <a href="/works/">VIEW MORE OUR WORKS</a>
-    </div>
+    <OtherWorks :posts="allPosts" />
   </div>
 </template>
 
 <script>
-import OtherWorks from '~/components/OtherWorks'
+import OtherWorks from '~/components/molecules/OtherWorks'
 // contentfulの宣言
 import { createClient } from '~/plugins/contentful.js';
 // 設定情報の取得
@@ -63,8 +60,7 @@ export default {
   },
   // データの取得(非同期)
   asyncData({ env, params }) {
-    return client
-      .getEntries({
+    return client.getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
       })
       .then((entries) => {
@@ -82,7 +78,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   h2 {
     font-family: "Ropa Sans", sans-serif;
     font-size: 2.4rem;
@@ -181,19 +177,6 @@ export default {
         font-size: 1.4rem;
         font-weight: 400;
       }
-    }
-  }
-  .more-btn {
-    padding-top: 65px;
-    padding-bottom: 65px;
-    text-align: center;
-    a {
-      color: #828282;
-      font-size: 2rem;
-      font-family: "Ropa Sans", sans-serif;
-      line-height: 1;
-      text-align: center;
-      text-decoration: none;
     }
   }
 </style>

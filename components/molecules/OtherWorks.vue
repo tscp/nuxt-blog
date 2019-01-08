@@ -16,41 +16,19 @@
         </li>
       </ul>
     </div>
+    <div class="more-btn">
+      <a href="/works/">VIEW MORE OUR WORKS</a>
+    </div>
   </div>
 </template>
 
 <script>
-  // contentfulの宣言
-  import {createClient} from '~/plugins/contentful.js'
-  // 設定情報の取得
-  const client = createClient();
-
   export default {
-    // 変数の宣言
-    data () {
-      return {
-        posts: []
-      }
-    },
-    // データの取得(非同期)
-    asyncData ({ env }) {
-      // contentfulより記事データを取得
-      return client.getEntries({
-        // 対象のブログID
-        'content_type': env.CTF_BLOG_ID,
-        // 最大取得件数
-        'limit': 10,
-      }).then(entries => {
-        // 取得出来たのでindex.vueに返却
-        return {
-          posts: entries.items
-        }
-      }).catch(console.error)
-    }
+    props: ['posts']
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   h3 {
     width: 100%;
     height: auto;
@@ -58,7 +36,6 @@
     text-align: center;
     font-family: "Ropa Sans", sans-serif;
     letter-spacing: 0.2em;
-    font-size: 24px;
     font-size: 2.4rem;
   }
 
@@ -85,5 +62,17 @@
       }
     }
   }
-
+  .more-btn {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    text-align: center;
+    a {
+      color: #828282;
+      font-size: 2rem;
+      font-family: "Ropa Sans", sans-serif;
+      line-height: 1;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
 </style>
