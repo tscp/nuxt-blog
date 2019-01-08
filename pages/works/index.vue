@@ -54,7 +54,7 @@
       // contentfulより記事データを取得
       return client.getEntries({
         // 対象のブログID
-        'content_type': env.CTF_BLOG_ID,
+        'content_type': 'blog',
         // 最大取得件数
         'limit': 10,
       }).then(entries => {
