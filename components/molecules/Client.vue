@@ -27,7 +27,7 @@
                       'マイケル・コース ジャパン 株式会社',
                       'モロッカンオイルジャパン 株式会社',
                       'Laline JAPAN 株式会社']"
-        />,
+        />
         <ClientList category="AGENCY / PRESS ROOM"
                     v-bind:list="[
                       '株式会社 葵プロモーション',
