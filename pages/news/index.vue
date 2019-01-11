@@ -12,8 +12,8 @@
             </figure>
             <div class="text-block">
               <div class="date-block">
-                <p class="day"></p>
-                <p class="month-year"></p>
+                <p class="day">{{ post.fields.date }}</p>
+                <p class="month-year">{{ post.fields.date }}</p>
               </div>
               <div class="content">
                 <h3>{{ post.fields.title }}</h3>
