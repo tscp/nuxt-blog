@@ -11,10 +11,15 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "ajv": "^6.6.2",
     "contentful": "^7.0.5",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {
-    "cross-env": "^5.0.1"
+    "cross-env": "^5.0.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "sass-resources-loader": "^2.0.0",
+    "style-loader": "^0.23.1"
   }
 }

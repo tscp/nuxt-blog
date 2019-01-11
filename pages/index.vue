@@ -1,57 +1,33 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        nuxt-blog
-      </h1>
-      <h2 class="subtitle">
-        My scrumtrulescent Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
-        <nuxt-link to="/articles/" class="button--grey">ブログ一覧へ</nuxt-link>
-      </div>
+  <div>
+    <h1 class="title">
+      MAKE BRAND-NEW EXPERIENCE
+    </h1>
+    <p>
+      panoramaは、デジタル領域を軸とする クリエイティブカンパニーです。<br>
+      私たちは、常に広い視野でモノコトに向き合い、<br>
+      クリエイティブを通じて、その価値を最大化することで、<br>
+      世の中がちょっと良くなる体験を届けます。
+    </p>
+    <nuxt-link to="/company/">VIEW COMPANY PROFILE</nuxt-link>
+
+    <div class="links">
+      <nuxt-link to="/articles/" class="button--grey">ブログ一覧へ</nuxt-link>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
 </script>
 
 <style>
-.container
-{
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 .title
 {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+  font-size: 1.6em;
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, メイリオ, Roboto, "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-.subtitle
-{
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+  text-rendering: auto;
 }
 .links
 {
