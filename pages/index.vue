@@ -12,7 +12,7 @@
     <nuxt-link to="/company/">VIEW COMPANY PROFILE</nuxt-link>
 
     <div class="links">
-      <nuxt-link to="/articles/" class="button--grey">ブログ一覧へ</nuxt-link>
+      <nuxt-link to="/works/" class="button--grey">ブログ一覧へ</nuxt-link>
     </div>
   </div>
 </template>

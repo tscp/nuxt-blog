@@ -72,14 +72,14 @@ module.exports = {
     routes() {
       return Promise.all([
         client.getEntries({
-          content_type: config.CTF_BLOG_ID,
-        }),
+          'content_type': 'blog',
+        })
         // client.getEntries({
         //   content_type: config.CTF_CATEGORY_ID,
         // }),
       ])
         .then(([posts, categories]) => [
-          ...posts.items.map(post => `works/${post.fields.id}`),
+          ...posts.items.map(post => `works/${post.fields.slug}`),
           // ...categories.items.map(category => `articles/category/${category.fields.slug}`),
         ]);
     },
