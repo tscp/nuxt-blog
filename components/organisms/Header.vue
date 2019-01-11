@@ -31,7 +31,7 @@
         background-color: rgba(0, 0, 0, 0.8);
         transition: 0.2s ease;
 
-        .logo svg {
+        /deep/ .logo svg {
           fill: #fff;
         }
       }
