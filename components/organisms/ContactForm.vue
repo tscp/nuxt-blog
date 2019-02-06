@@ -1,6 +1,6 @@
 <template>
   <div class="contact">
-    <form name="contact" method="POST" data-netlify="true">
+    <form name="contact" method="POST" data-netlify="true" action="/contact/success/">
       <FormGroup label="名前">
         <Input label="姓:" name="lastname" />
         <Input label="名:" name="firstname" />
