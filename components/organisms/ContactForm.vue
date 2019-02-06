@@ -1,6 +1,12 @@
 <template>
   <div class="contact">
-    <form name="contact" method="POST" data-netlify="true" action="/contact/success/">
+    <form name="contact" @submit="checkForm" method="POST" data-netlify="true" action="/contact/success/">
+      <div class="errors" v-if="errors.length">
+        <h3>入力内容に不備があります。</h3>
+        <ul>
+          <li v-for="error in errors">{{ error }}</li>
+        </ul>
+      </div>
       <FormGroup label="名前">
         <Input label="姓:" name="lastname" />
         <Input label="名:" name="firstname" />
@@ -172,6 +178,7 @@
       Input, Radio, RadioGroup, Select, FormGroup
     },
     data: () => ({
+      errors: [],
       form: {
         radio1: 1,
         select: 0
@@ -256,11 +263,34 @@
         { id: 11, value: '11'},
         { id: 12, value: '12'}
       ]
-    })
+    }),
+    methods : {
+      checkForm: function(e) {
+        if(this.lastname && this.firstname ) return true;
+        this.errors = [];
+        if( !this.lastname ) this.errors.push("苗字を入れてください");
+        if( !this.firstname ) this.errors.push("名前を入れてください");
+        e.preventDefault();
+      }
+    }
   }
 </script>
 
 <style lang="scss" scoped>
+  .errors {
+    border: solid 1px;
+    margin-bottom: 40px;
+    padding: 40px;
+    h3 {
+      margin-bottom: 10px;
+    }
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+      }
+    }
+  }
   .contact {
     padding: 50px 0;
     background-color: #f6f5f6;
