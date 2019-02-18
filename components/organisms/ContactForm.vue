@@ -158,6 +158,9 @@
       <FormGroup label="自己 PR / 自由記入欄">
         <label><textarea name="pr"></textarea></label>
       </FormGroup>
+      <FormGroup label="ファイル添付">
+        <Input type="file" label="" name="attachfile" />
+      </FormGroup>
       <div>
         <h3>個人情報の取り扱いについて</h3>
         <p>テキストテキスト</p>
